@@ -1,0 +1,16 @@
+<div class="new-post">
+    <h2>新規投稿</h2>
+    <%= form_tag("/posts/create") do %>
+    <div>
+        <input type="text" name="title">
+    </div>
+    <div>
+        <input type="text" name="content">
+    </div>
+    <div>
+        <input type="file" name="image">
+    </div>
+    
+        <input type="submit" value="送信">
+    <% end %>
+</div>

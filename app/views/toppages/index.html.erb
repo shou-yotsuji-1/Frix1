@@ -1,0 +1,36 @@
+<div class="main">
+    <div class="main-container">
+        
+        
+        
+       <h1 class="frix-heading">WELCOME TO FRIX</h1>
+    </div>
+</div>
+
+<div class="column ">
+    
+     <div class="card">
+         <% @posts.each do |post| %>
+         
+         <div class="card-header">
+             <div class="title">
+             <%= post.title %>
+            </div>
+         </div>
+         <div class="card-body">
+            <div class="column-image">
+             <img class="logo" src="<%= "/posts_image/#{post.image}"%>">
+            </div>
+            <div class="column-content">
+             <%= link_to(post.content,"/posts/#{post.id}")%>
+             <div class="card-created">
+             <div class="column-created">
+             <%= post.created_at %>
+             </div>
+            </div>
+            </div>
+         </div>
+         <% end %>
+     </div>
+</div>
+
